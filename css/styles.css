@@ -85,7 +85,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 /* site-nav */
 .site-nav {
   display: flex;
@@ -127,6 +126,28 @@ body {
 .link:focus {
   color: var(--accent-color);
 }
+/* icons */
+.mail::before {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-size: contain;
+}
+/* .mail::before:hover {
+  color: var(--accent-color); */
+
+.phone::before {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/smartphone.svg);
+  background-size: contain;
+}
 /* hero */
 .hero-title {
   max-width: 596px;
@@ -146,9 +167,22 @@ body {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #2f303a;
+  /* background-color: #2f303a; */
   max-height: 600px;
   text-align: center;
+}
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  outline: 1px solid black;
 }
 /* button */
 .button {
