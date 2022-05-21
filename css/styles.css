@@ -182,7 +182,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  outline: 1px solid black;
 }
 /* button */
 .button {
@@ -224,10 +223,10 @@ body {
 .specifics-list {
   display: flex;
 }
-.specifics-list > .item {
+.specifics-list > .specifics-item {
   width: 270px;
 }
-.specifics-list .item:not(:last-child) {
+.specifics-item:not(:last-child) {
   margin-right: 30px;
 }
 .specifics-list .title {
@@ -239,6 +238,28 @@ body {
 }
 .specifics-list .text {
   line-height: 1.71;
+}
+.specifics-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 /* work */
 .work {
@@ -368,6 +389,9 @@ body {
   padding-bottom: 60px;
   background-color: #2f303a;
 }
+.footer {
+  display: flex;
+}
 .logo-secondary {
   display: block;
   margin-bottom: 20px;
@@ -394,4 +418,43 @@ body {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
+}
+.social {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.social-link {
+  display: inline-block;
+  margin-top: 20px;
+  height: 44px;
+  width: 44px;
+  background-color: #212121;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.social-link:nth-child(1) {
+  background-image: url(../images/icons/instagram.svg);
+}
+.social-link:nth-child(2) {
+  background-image: url(../images/icons/twitter.svg);
+}
+.social-link:nth-child(3) {
+  background-image: url(../images/icons/facebook.svg);
+}
+.social-link:nth-child(4) {
+  background-image: url(../images/icons/linkedin.svg);
+}
+.social-media {
+  width: 206px;
+  margin-left: 70px;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
 }
