@@ -127,26 +127,15 @@ body {
   color: var(--accent-color);
 }
 /* icons */
-.mail::before {
-  display: inline-block;
-  content: '';
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-size: contain;
-}
-/* .mail::before:hover {
-  color: var(--accent-color); */
 
-.phone::before {
-  display: inline-block;
-  content: '';
-  width: 10px;
-  height: 16px;
+.envelope,
+.smartphone {
+  fill: #757575;
   margin-right: 10px;
-  background-image: url(../images/smartphone.svg);
-  background-size: contain;
+}
+.envelope:hover,
+.smartphone:hover {
+  fill: var(--accent-color);
 }
 /* hero */
 .hero-title {
@@ -239,27 +228,11 @@ body {
 .specifics-list .text {
   line-height: 1.71;
 }
-.specifics-item::before {
-  display: block;
-  content: '';
+.specifics-icon {
+  width: 270px;
   height: 120px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f5f4fa;
   margin-bottom: 30px;
-}
-.icon-antenna::before {
-  background-image: url(../images/icons/antenna.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/icons/clock.svg);
-}
-.icon-diagram::before {
-  background-image: url(../images/icons/diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/icons/astronaut.svg);
 }
 /* work */
 .work {
@@ -302,16 +275,29 @@ body {
   padding-left: 15px;
 }
 /* clients */
-.button-list {
+.clients-list {
   display: flex;
 }
-.button-clients {
-  padding: 0;
-}
-.button-icon {
+.clients-list .item {
   width: 170px;
   height: 92px;
+  border: 1px solid #afb1b8;
+  text-align: center;
+  padding: 16px 32px;
 }
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-list .item {
+  cursor: pointer;
+}
+.link-icon {
+  fill: #afb1b8;
+}
+.link-icon:hover {
+  fill: #2196f3;
+}
+
 /* стилі для портфоліо */
 
 /* скритий заголовок */
@@ -434,38 +420,31 @@ body {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-
   color: #ffffff;
-}
-.social-link {
-  display: inline-block;
-  margin-top: 20px;
-  height: 44px;
-  width: 44px;
-  background-color: #212121;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
-
-.social-link:nth-child(1) {
-  background-image: url(../images/icons/instagram.svg);
-}
-.social-link:nth-child(2) {
-  background-image: url(../images/icons/twitter.svg);
-}
-.social-link:nth-child(3) {
-  background-image: url(../images/icons/facebook.svg);
-}
-.social-link:nth-child(4) {
-  background-image: url(../images/icons/linkedin.svg);
 }
 .social-media {
   width: 206px;
   margin-left: 70px;
 }
-.social-link:hover,
+.social-list {
+  display: flex;
+  margin-top: 20px;
+}
+/* 2f303a */
+.social-link {
+  background-color: #757575;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-link.item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icons {
+  fill: #ffffff;
+}
+/* .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-}
+} */
